@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
-
+import './public-path';
 Vue.config.productionTip = false;
 
 new Vue({
@@ -33,7 +33,7 @@ export async function mount(props = {}) {
 
 export async function unmount() {
   console.log('vue2 unmount', instance);
-  instance.$destory();
-  instance.$el.innerHTMl = '';
+  instance.$destroy();
+  instance.$el.innerHTML = '';
   instance = null;
 }

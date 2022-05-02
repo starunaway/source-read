@@ -29,9 +29,15 @@ export const importHtml = async (url) => {
   async function execScripts() {
     const scripts = await getExternalScripts();
 
+    // 手动构建 CommonJS环境
+    const module = {exports: {}};
+    const exports = module.exports;
+
     scripts.forEach((code) => {
       eval(code);
     });
+
+    return module.exports;
   }
 
   return {

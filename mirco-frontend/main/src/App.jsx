@@ -10,7 +10,7 @@ function App() {
       </Routes>
 
       <Link to='/subapp/react'>react</Link>
-      <Link to='/subapp/vue3'>vue3</Link>
+      <Link to='/subapp/vue2'>vue2</Link>
 
       <div id='subapp-container'></div>
     </div>
