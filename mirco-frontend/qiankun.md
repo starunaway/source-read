@@ -720,3 +720,6 @@ scopedCSS 的处理过程可以在[这里](https://github.com/umijs/qiankun/blob
 ## 总结
 
 总体看来 qiankun 是对 single-spa 的封装，使用了 single-spa 的子应用注册加载和生命周期。在子应用生命周期内注入了 css/js 沙箱和应用间通信过程。css 的沙箱支持 scope 和 shadow-dom，js 的沙箱是保存子应用环境变量的修改
+
+参考连接:
+[qiankun 2.x 运行时沙箱 源码分析](https://mp.weixin.qq.com/s?__biz=MzA3NTk4NjQ1OQ==&mid=2247484446&idx=1&sn=0b918d4c185900a15d1874012c2da2b3&chksm=9f69676aa81eee7c673243da440d65a5d3354d0a2a40557bc84a28222cc3d3210aa3f681d655&scene=178&cur_album_id=2251416802327232513#rd)
