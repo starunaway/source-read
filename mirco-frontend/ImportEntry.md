@@ -366,3 +366,6 @@ export default function processTpl(tpl, baseURI, postProcessTemplate) {
 }
 
 ```
+
+参考链接：  
+[HTML Entry 源码分析](https://mp.weixin.qq.com/s?__biz=MzA3NTk4NjQ1OQ==&mid=2247484426&idx=1&sn=e27b70b08087417f99cdb618d132a16f&chksm=9f69677ea81eee6804f9a301802ffc5c7accc814d9f8a312fe00b7a2bec9383aee91e9d506e9&scene=178&cur_album_id=2251416802327232513#rd)

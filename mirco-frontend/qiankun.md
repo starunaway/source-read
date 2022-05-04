@@ -662,6 +662,8 @@ const rawRemoveChild = HTMLElement.prototype.removeChild;
 
 window 上的属性监听，主要是 Interval (子应用卸载时清空定时器)，WindowListener(子应用卸载时要移除 addEventListener 添加的事件)和 HistoryListener(window.g_history 属性，猜测是 import-html-entry 的方法)
 
+不过没有处理 local storage，不同子应用可能会起到冲突
+
 ### createElement 实现 css 样式隔离
 
 ```TS
@@ -721,5 +723,6 @@ scopedCSS 的处理过程可以在[这里](https://github.com/umijs/qiankun/blob
 
 总体看来 qiankun 是对 single-spa 的封装，使用了 single-spa 的子应用注册加载和生命周期。在子应用生命周期内注入了 css/js 沙箱和应用间通信过程。css 的沙箱支持 scope 和 shadow-dom，js 的沙箱是保存子应用环境变量的修改
 
-参考连接:
+参考连接:  
+[微前端框架 之 qiankun 从入门到源码分析](https://mp.weixin.qq.com/s?__biz=MzA3NTk4NjQ1OQ==&mid=2247484411&idx=1&sn=7e67d2843b8576fce01b18269f33f7e9&chksm=9f69608fa81ee99954b6b5a1e3eb40e194c05c1edb504baac27577a0217f61c78ff9d0bb7e23&token=165646905&lang=zh_CN#rd)  
 [qiankun 2.x 运行时沙箱 源码分析](https://mp.weixin.qq.com/s?__biz=MzA3NTk4NjQ1OQ==&mid=2247484446&idx=1&sn=0b918d4c185900a15d1874012c2da2b3&chksm=9f69676aa81eee7c673243da440d65a5d3354d0a2a40557bc84a28222cc3d3210aa3f681d655&scene=178&cur_album_id=2251416802327232513#rd)
